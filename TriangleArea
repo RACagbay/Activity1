@@ -5,7 +5,7 @@ public class TriangleArea {
         int base = 5;
 
         // Calculate the area
-        double area = 0.5 * base * height;
+        double area = 1/2 * base * height;
 
         // Print the result
         System.out.println("Area of the right-angled triangle: " + area);
