@@ -1,0 +1,13 @@
+public class TriangleArea {
+    public static void main(String[] args) {
+        // Given values
+        int height = 5;
+        int base = 5;
+
+        // Calculate the area
+        double area = 0.5 * base * height;
+
+        // Print the result
+        System.out.println("Area of the right-angled triangle: " + area);
+    }
+}
