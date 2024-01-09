@@ -1,31 +1,27 @@
 import java.util.Scanner;
 
-public class PrimeNumberChecker {
+public class Pyramid {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-        int number = scanner.nextInt();
-        scanner.close();
 
-        if (isPrime(number)) {
-            System.out.println(number + " is a prime number.");
-        } else {
-            System.out.println(number + " is not a prime number.");
-        }
-    }
+        System.out.print("Enter the height of the pyramid: ");
+        int height = scanner.nextInt();
 
-    private static boolean isPrime(int num) {
-        if (num <= 1) {
-            return false;
-        }
-
-        for (int i = 2; i <= Math.sqrt(num); i++) {
-            if (num % i == 0) {
-                return false;
+        for (int i = 1; i <= height; i++) {
+            // Print spaces
+            for (int j = 1; j <= height - i; j++) {
+                System.out.print(" ");
             }
+
+            // Print asterisks
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+
+            // Move to the next line
+            System.out.println();
         }
 
-        return true;
+        scanner.close();
     }
 }
